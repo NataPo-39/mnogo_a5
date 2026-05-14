@@ -1,10 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Журнал «МНОГО» – Калининград</title>
+    <meta name="description" content="Информационно-развлекательный журнал Калининградской области. Анонсы, экспозиции, темы номера, где отдохнуть и что посмотреть.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo-area">
+                <!-- Здесь можно будет разместить логотип: <img src="/logo.png" alt="Логотип МНОГО" class="logo-img"> -->
+                <h1 class="logo-title">МНОГО</h1>
+                <p class="logo-slogan">Ваш информационный сити-гид</p>
+            </div>
+            <nav class="nav">
+                <a href="#about">О журнале</a>
+                <a href="#rubrics">Рубрики</a>
+                <a href="#news">Анонсы</a>
+            </nav>
+        </div>
+    </header>
 
+    <main>
+        <!-- О журнале -->
+        <section id="about" class="section about">
+            <div class="container">
+                <h2>О журнале «МНОГО»</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>Глянцевый информационно-развлекательный журнал — самый массовый журнал Калининградской области. Тираж – 9900 экз., формат А5.</p>
+                        <p>Распространяется по Калининграду и побережью в заведениях разных сфер: кафе, отели, бизнес-центры, салоны красоты. Лежит месяц и более, обеспечивая многократный охват аудитории.</p>
+                        <p><strong>Аудитория:</strong> женщины 62%, мужчины 38%, возраст 20–65 лет, а также туристы и гости города.</p>
+                        <p>Все публикации дублируются в социальных сетях. Архив номеров с 2012 года доступен на сайте.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat">9900 экз.<br><span>тираж</span></div>
+                        <div class="stat">A5<br><span>формат</span></div>
+                        <div class="stat">62/38<br><span>♀/♂ аудитория</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Рубрики (4 штуки) -->
+        <section id="rubrics" class="section rubrics">
+            <div class="container">
+                <h2>Постоянные рубрики</h2>
+                <div class="rubrics-grid">
+                    <div class="rubric-card">
+                        <h3>Календарь событий</h3>
+                        <p>Концерты, спектакли, мастер-классы, экскурсии — анонсы на текущий и следующий месяц.</p>
+                    </div>
+                    <div class="rubric-card">
+                        <h3>Экспозиции</h3>
+                        <p>Музеи, галереи, арт-пространства с анонсами выставок и экспозиций.</p>
+                    </div>
+                    <div class="rubric-card">
+                        <h3>Тема номера</h3>
+                        <p>Главная тема каждого выпуска: праздники, события, идеи редакции.</p>
+                    </div>
+                    <div class="rubric-card">
+                        <h3>Где в Калининграде?</h3>
+                        <p>Рекламные макеты компаний: товары и услуги для жителей и гостей города.</p>
+                    </div>
+                </div>
+                <p class="rubrics-note">Всего в журнале более 18 рубрик: кафе, достопримечательности, медицина, детский мир, отзывы, гороскоп и другие.</p>
+            </div>
+        </section>
+
+        <!-- Динамический блок анонсов -->
+        <section id="news" class="section news">
+            <div class="container">
+                <h2>Анонсы и новости</h2>
+                <div id="newsList" class="news-list">
+                    <p>Загрузка анонсов...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Серверное время (динамика через JS) -->
+        <section class="section server-time">
+            <div class="container">
+                <p>Текущее время на сервере: <strong id="serverTime">--:--:--</strong></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>© <span id="year"></span> Журнал «МНОГО»</p>
+            <p>Учебный проект для деплоя на VPS</p>
+        </div>
+    </footer>
+
+    <script src="/main.js"></script>
 </body>
 </html>
